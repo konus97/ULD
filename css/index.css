@@ -304,7 +304,7 @@ header.down .hover_menu{
 :root {
   --swiper-theme-color: #fff!important;
 }
-.main_product_list .swiper-button-next:after,.main_product_list .swiper-button-prev:after {
+.main_product_list > div > .swiper-button-next:after,.main_product_list > div > .swiper-button-prev:after {
   font-size:47px!important;
 }
 
