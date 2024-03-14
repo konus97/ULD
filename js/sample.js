@@ -1,4 +1,5 @@
 
+
 $(function(){
 
     let total = $(".slide li").length;
