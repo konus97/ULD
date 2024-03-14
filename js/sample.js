@@ -79,7 +79,7 @@ $(function(){
       
 
 
-    $(function(){
+   
       var $header = $('header'); //헤더를 변수에 넣기
       var $window = $(window);
       var scrollThreshold = 300; // 스크롤이 변할 위치
@@ -94,12 +94,12 @@ $(function(){
       });
   
       updateHeader(); // 초기 헤더 상태 설정
-  });
+
   
 
 
 
-  var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     spaceBetween: 20,
     freeMode: true,
