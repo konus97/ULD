@@ -48,35 +48,66 @@ $(function(){
 
 
 
-
     
+        if ($(window).width() >= 1204) {
+            $(".menu_navi , .hover_menu").mouseover(function(){
+                $(".hover_menu").stop().css({
+                    display: "block",
+                    "border-top": "1px solid #000",
+                    "border-bottom": "1px solid #000"
+                });
+              
+                $("header").stop().css({background: "#fff"});
+                $(".menu_navi li a").stop().css({color:"#000"});
+                $("header .h_wrap .logo a img").css("filter", "invert(0%)");
+            });
     
+            $(".menu_navi , .hover_menu").mouseleave(function(){
+                $(".hover_menu").stop().css({
+                    display: "none",
+                    "border-top": "0px solid #000",
+                    "border-bottom": "0px solid #000"
+                });
+                $("header").stop().css({background:"none"});
+                $(".menu_navi a").stop().css({color:"#fff"});
+                $("header .h_wrap .logo a img").css("filter", "invert(100%)");
+            });
+        }
+  
 
-
-      $(".menu_navi , .hover_menu").mouseover(function(){
-        $(".hover_menu").stop().css({
-          display: "block",
-          "border-top": "1px solid #000",
-          "border-bottom": "1px solid #000"
-        });
+        $(document).ready(function(){
+          if ($(window).width() <= 1203) {
+              $(".menu_navi > li").on("click", function(){
+                  // 기존에 선택된 항목에서 active 클래스 제거하고 배경색 초기화
+                  $(".menu_navi > li.active").removeClass("active").css({background: "transparent"});
+                  // 클릭된 항목에 active 클래스 추가하고 배경색 변경
+                  $(this).addClass("active").css({background: "rgb(63, 188, 210)"});
       
-        $("header").stop().css({background: "#fff"});
-        $(".menu_navi li a").stop().css({color:"#000"});
-        $("header .h_wrap .logo a img").css("filter", "invert(0%)");
+                  var $submenu = $(this).children(".m_submenu");
+                  if ($submenu.is(":visible")) {
+                      $submenu.slideUp();
+                  } else {
+                      $(".m_submenu").slideUp();
+                      $submenu.slideDown();
+                  }
+              });
+      
+              $(".m_menu_btn").on("click",function(){
+                  $(".menu_navi").stop().css({right:"0"});
+              });
+      
+              $(".close_btn").on("click",function(){
+                  $(".menu_navi").stop().css({right:"-100%"});
+                  // 메뉴 닫을 때 active 클래스 제거하고 배경색 초기화
+                  $(".menu_navi > li.active").removeClass("active").css({background: "transparent"});
+              });
+          }
       });
-
-      $(".menu_navi , .hover_menu").mouseleave(function(){
-        $(".hover_menu").stop().css({
-          display: "none",
-          "border-top": "0px solid #000",
-          "border-bottom": "0px solid #000"
-        });
-        $("header").stop().css({background:"none"});
-        $(".menu_navi a").stop().css({color:"#fff"});
-        $("header .h_wrap .logo a img").css("filter", "invert(100%)");
-    });
-    
       
+      
+      
+    
+
 
 
    
