@@ -296,7 +296,7 @@
    /*베스트 판매 리스트*/
 .main_product_list{
   width:95%;
-  margin:30px auto 50px;
+  margin:50px auto 70px;
 }
 .main_product_list h3{
   font-size: 3rem;
@@ -359,7 +359,7 @@
 .instar_style{
   width: 100%;
   margin: 0 auto;
-  padding: 20px 20px 50px;
+  padding: 50px 20px 110px;
   box-sizing: border-box;
   background:#000;
 }
@@ -386,8 +386,8 @@
   align-items: center;
 }
 .instar_style .head .icon{
-  width:15px;
-  height:15px;
+  width:20px;
+  height:20px;
 }
 .instar_style .head .icon img{
   width:100%;
@@ -396,7 +396,7 @@
 }
 .instar_style .head .instar_link a{
   font-weight: 700;
-  font-size: 10px;
+  font-size: 14px;
   color: #fff;
 }
 .instar_style .head .instar_link a:hover{
@@ -418,9 +418,10 @@ footer .f_wrap .f_top li:first-child{
 }
 footer .f_wrap .f_top li h3{
   font-weight: 700;
+  font-size:14px;
 }
 footer .f_wrap .f_top li p, footer .f_wrap .f_top li a{
-  font-size: 12px;
+  font-size: 11px;
     color: #000;
     font-weight: 500;
     line-height: 1.8;
