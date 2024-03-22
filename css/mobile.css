@@ -73,7 +73,7 @@
      color:rgb(63, 188, 210)!important;
    }
    header.down .h_wrap .logo a{
-     width:190px;
+     width:150px;
    }
    header.down .h_wrap .logo a img{
      filter: invert(0%)!important;
@@ -81,7 +81,9 @@
    header.down .hover_menu{
      top: 70px;
    }
-  
+   header.down .h_wrap .m_menu_btn li{
+    background-color:#000;
+   }
   
    /*menu*/
     .menu_navi{
