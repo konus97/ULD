@@ -61,7 +61,7 @@ $(function(){
                 $(".menu_navi li a").stop().css({color:"#000"});
                 $("header .h_wrap .logo a img").css("filter", "invert(0%)");
             });
-    
+    /*
             $(".menu_navi , .hover_menu").mouseleave(function(){
                 $(".hover_menu").stop().css({
                     display: "none",
@@ -71,24 +71,22 @@ $(function(){
                 $("header").stop().css({background:"none"});
                 $(".menu_navi a").stop().css({color:"#fff"});
                 $("header .h_wrap .logo a img").css("filter", "invert(100%)");
-            });
+            });*/
         }
   
 
         $(document).ready(function(){
           if ($(window).width() <= 1203) {
               $(".menu_navi > li").on("click", function(){
-                  // 기존에 선택된 항목에서 active 클래스 제거하고 배경색 초기화
-                  $(".menu_navi > li.active").removeClass("active").css({background: "transparent"});
-                  // 클릭된 항목에 active 클래스 추가하고 배경색 변경
-                  $(this).addClass("active").css({background: "rgb(63, 188, 210)"});
-      
                   var $submenu = $(this).children(".m_submenu");
                   if ($submenu.is(":visible")) {
                       $submenu.slideUp();
+                      $(".menu_navi > li > a").css({color:"#fff"}); // 모든 메뉴의 색상을 흰색으로 변경
                   } else {
                       $(".m_submenu").slideUp();
                       $submenu.slideDown();
+                      $(".menu_navi > li > a").css({color:"#fff"}); // 모든 메뉴의 색상을 흰색으로 변경
+                      $(this).children("a").css({color:"rgb(63, 188, 210)"}); // 클릭된 메뉴의 색상을 변경
                   }
               });
       
@@ -98,11 +96,10 @@ $(function(){
       
               $(".close_btn").on("click",function(){
                   $(".menu_navi").stop().css({right:"-100%"});
-                  // 메뉴 닫을 때 active 클래스 제거하고 배경색 초기화
-                  $(".menu_navi > li.active").removeClass("active").css({background: "transparent"});
               });
           }
       });
+      
       
       
       
@@ -127,31 +124,56 @@ $(function(){
       updateHeader(); // 초기 헤더 상태 설정
 
   
-
-
-
-    var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    freeMode: true,
-    loop: true, // 슬라이드가 끝에 도달했을 때 다시 맨 앞으로 이동
-    autoplay: {
-      delay: 3000, // 자동 슬라이드 간격(ms)
-      disableOnInteraction: false, // 사용자 상호 작용 시 자동 슬라이드 중지 여부
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      slideChange: function () {
-        if (this.isEnd) {
-          // 마지막 슬라이드에 도달하면 첫 번째 슬라이드로 이동 (자연스럽게)
-          this.slideTo(0, 1000); // 첫 번째 슬라이드의 인덱스는 0, 1000은 이동 시간(ms)을 나타냅니다.
+      $(document).ready(function(){
+        if ($(window).width() <= 1204) {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1.1,
+                spaceBetween: 5,
+                freeMode: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                on: {
+                    slideChange: function () {
+                        if (this.isEnd) {
+                            this.slideTo(0, 1000);
+                        }
+                    },
+                },
+            });
+        } else {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                freeMode: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                on: {
+                    slideChange: function () {
+                        if (this.isEnd) {
+                            this.slideTo(0, 1000);
+                        }
+                    },
+                },
+            });
         }
-      },
-    },
-  });
+    });
+    
+
+   
   
 });
 
