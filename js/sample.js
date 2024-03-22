@@ -61,7 +61,7 @@ $(function(){
                 $(".menu_navi li a").stop().css({color:"#000"});
                 $("header .h_wrap .logo a img").css("filter", "invert(0%)");
             });
-    /*
+    
             $(".menu_navi , .hover_menu").mouseleave(function(){
                 $(".hover_menu").stop().css({
                     display: "none",
@@ -71,7 +71,7 @@ $(function(){
                 $("header").stop().css({background:"none"});
                 $(".menu_navi a").stop().css({color:"#fff"});
                 $("header .h_wrap .logo a img").css("filter", "invert(100%)");
-            });*/
+            });
         }
   
 
