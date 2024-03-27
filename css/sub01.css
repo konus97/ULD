@@ -1,4 +1,4 @@
-
+@media (min-width:1024px){
 .sub_top_banner{
     position:relative;
     width:100%;
@@ -8,9 +8,9 @@
 
 .sub_top_banner h3{
     color:#fff;
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: 3px;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-align:Center;
     position:absolute;
     top:50%;
@@ -75,3 +75,4 @@
   .sub_contant .product_text .nss_link:hover{
     background:#0cd1e4;
   }
+}

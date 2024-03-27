@@ -39,9 +39,7 @@
    header .h_wrap .m_menu_btn {
     width:25px;
     height: 20px;
-    /*background: url(../img/ic-navi-menu.png) no-repeat;
-  background-size: 100%;
-  filter: invert(1);*/
+
   margin-right:30px;
   display: flex;
   flex-direction: column;
@@ -359,7 +357,7 @@
 .instar_style{
   width: 100%;
   margin: 0 auto;
-  padding: 50px 20px 110px;
+  padding: 50px 20px 70px;
   box-sizing: border-box;
   background:#000;
 }
@@ -395,8 +393,8 @@
   filter: invert(1);
 }
 .instar_style .head .instar_link a{
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px;
   color: #fff;
 }
 .instar_style .head .instar_link a:hover{
@@ -418,22 +416,23 @@ footer .f_wrap .f_top li:first-child{
 }
 footer .f_wrap .f_top li h3{
   font-weight: 700;
-  font-size:14px;
+  font-size:15px;
 }
 footer .f_wrap .f_top li p, footer .f_wrap .f_top li a{
   font-size: 11px;
     color: #000;
-    font-weight: 500;
     line-height: 1.8;
 }
 footer .f_wrap .f_top li .num{
   margin:7px 0px;
 }
 footer .f_wrap .f_bottom{
-  margin:15px 0px;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column-reverse;
 }
 footer .f_wrap .f_bottom .f_logo{
-  width:150px;
+  width:220px;
 }
 footer .f_wrap .f_bottom .f_logo a{
   width:100%;
@@ -462,7 +461,85 @@ footer .f_wrap .f_bottom .f_logo a img{
 footer .copy{
  display:block;
   color:#222;
-  font-size:12px;
- font-weight:500;
+  font-size:10px;
+}
+
+
+/*서브페이지 모바일css*/
+.sub_top_banner{
+  position:relative;
+  width:100%;
+  height:300px;
+  background: url(../img/main_bg02.jpg) center bottom no-repeat;
+}
+
+.sub_top_banner h3{
+  color:#fff;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align:Center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.sub_contant{
+  max-width:1280px;
+  margin:0 auto 100px;
+  padding-top:50px;
+}
+.sub_contant h3{
+font-size:2rem;
+font-weight:700;
+line-height: 18px;
+display:block;
+width:auto;
+padding-left:10px;
+}
+.sub_contant h3:before{
+display:inline-block;
+content:"";
+clear:both;
+width: 18px;
+height: 18px;
+background: url(../img/bg3_txt_1.png) no-repeat;
+background-size: 18px auto;
+margin-right: 5px;
+filter: invert(1);
+
+
+}
+.list_wrap{
+  font-size: 0;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+.list_wrap li{width:50%;margin:20px 0px;display:inline-block;}
+.list_wrap li .product_wrap{width:100%; height:100%;padding:0px 5px; box-sizing: border-box;} 
+.list_wrap li:nth-child(even) .product_wrap{padding-left:0;}
+.product_img{
+  height:180px!important;
+}
+.product_text{
+  padding-top:5px;
+}
+.product_text .name{
+  font-size:14px;
+  font-weight:600;
+  color:#222;
+  display:block;
+}
+.sub_contant .product_text .nss_link{
+  display: inline-block;
+  padding: 5px 9px;
+  color: #fff;
+  background-color: #222;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.sub_contant .product_text .nss_link:hover{
+  background:#0cd1e4;
 }
 }
