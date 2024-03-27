@@ -520,7 +520,7 @@ filter: invert(1);
 .list_wrap li .product_wrap{width:100%; height:100%;padding:0px 5px; box-sizing: border-box;} 
 .list_wrap li:nth-child(even) .product_wrap{padding-left:0;}
 .product_img{
-  height:180px!important;
+  height: 323.182px;
 }
 .product_text{
   padding-top:5px;
