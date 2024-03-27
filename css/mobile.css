@@ -488,7 +488,8 @@ footer .copy{
 .sub_contant{
   max-width:1280px;
   margin:0 auto 100px;
-  padding-top:50px;
+  padding:50px 5px 0px 5px;
+
 }
 .sub_contant h3{
 font-size:2rem;
@@ -511,7 +512,7 @@ padding-left:10px;
 
 
 }
-.list_wrap{
+.sub_contant .list_wrap{
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
@@ -519,7 +520,6 @@ padding-left:10px;
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
-  padding:0px 5px;
 }
 .list_wrap li{margin:20px 0px;display:inline-block;}
 .list_wrap li .product_wrap{width:100%;box-sizing: border-box;} 
